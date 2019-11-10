@@ -129,7 +129,7 @@ export default {
 .slide {
   margin: 0 auto;
   overflow: hidden;
-  background-image: radial-gradient(circle farthest-side, #171f25,  black);
+  background-image: radial-gradient(circle farthest-corner, #e1dfe0,  #b9b8b9);
 }
 
 h1 {
@@ -148,6 +148,7 @@ p {
 
 .slide-content {
   font-family: Didact Gothic;
+  font-size: 3.5vmin;
 }
 
 .fadein-enter-active,

@@ -27,11 +27,11 @@ export default {
 .message {
   padding: 1vmin;
   text-align: center;
-  font-size: 5vmin;
+  font-size: 3vmin;
   margin: auto;
   font-family: Raleway;
   color: white;
-  width: 75vmin;
+  width: 65vmin;
   background: rgb(255, 54, 54);
   border-radius: 2vmin;
 }

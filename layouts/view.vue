@@ -78,52 +78,5 @@ export default {
 }
 </script>
 <style>
-.background {
-  display: flex;
-  align-items: center;
-  background: black;
-  height: 100vh;
-  width: 100vw;
-}
-
-.slide {
-  margin: 0 auto;
-  overflow: hidden;
-  background-image: radial-gradient(circle farthest-side, #171f25,  black);
-}
-
-h1 {
-  font-size: 7vmin;
-}
-
-p {
-  font-size: 3.5vmin;
-}
-
-.slide-title {
-  font-size: 7vmin;
-  font-weight: bold;
-  font-family: Raleway;
-}
-
-.slide-content {
-  font-family: Didact Gothic;
-}
-
-.fadein-enter-active,
-.fadein-leave-active {
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 400ms;
-}
-
-.fadein-enter,
-.fadein-leave-to {
-  opacity: 0;
-}
-
-.spacer {
-  height: 5vmin;
-}
 
 </style>

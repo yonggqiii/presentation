@@ -12,7 +12,7 @@ const firestore = admin.initializeApp(config).firestore()
 
 const meow = async function () {
   await firestore.doc('sequence/sequence').set({
-    sequence: ['1/1', '2/1', '2/2', '2/3', '2/4']
+    sequence: ['1/1', '2/1', '2/2', '2/3', '2/4', '2/5', '3/1', '4/1']
   })
 }
 

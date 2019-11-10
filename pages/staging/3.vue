@@ -1,23 +1,13 @@
 <template>
   <div class="container">
-    <div class="slide-title">
-      SCOPE
+    <div class="slide-title" style="margin-top: 30%;">
+      PROJECT INTRODUCTION
+    </div>
+    <hr>
+    <div class="slide-content" style="margin: auto;">
+      PROJECT TEAM
     </div>
     <div class="spacer" />
-    <div class="slide-content">
-      <p :class="{'hidden': !visible[1]}">
-        Project Introduction<br>
-      </p>
-      <p :class="{'hidden': !visible[2]}">
-        Project Planning
-      </p>
-      <p :class="{'hidden': !visible[3]}">
-        Project Execution
-      </p>
-      <p :class="{'hidden': !visible[4]}">
-        Project Summary
-      </p>
-    </div>
   </div>
 </template>
 
@@ -39,18 +29,33 @@ export default {
 </script>
 
 <style scoped>
+hr {
+  width: 60%;
+  animation: expand 1s ease-in-out;
+  margin-left: 10%;
+  border: 6px solid rgb(149, 166, 180);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+@keyframes expand {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
 * {
   transition: opacity 500ms ease-in-out;
 }
 
 .container {
+  padding-left: 10%;
   width: 100%;
   height: 100%;
-  padding: 20%;
   color: black;
-  overflow: hidden;
-  background-image: url("/penandpaper.png");
-  background-size: 130% 130%;
 }
 
 .hidden {
