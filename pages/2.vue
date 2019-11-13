@@ -1,16 +1,21 @@
 <template>
   <div class="container">
     <div class="slide-title">
-      Hello
+      SCOPE
     </div>
     <div class="spacer" />
     <div class="slide-content">
       <p :class="{'hidden': !visible[1]}">
-        How are you doing today? Are you able to see the slides being updated
-        in real-time?
+        Project Introduction<br>
       </p>
       <p :class="{'hidden': !visible[2]}">
-        If you are, great! Otherwise, let me know and I will debug this!
+        Project Planning
+      </p>
+      <p :class="{'hidden': !visible[3]}">
+        Project Execution
+      </p>
+      <p :class="{'hidden': !visible[4]}">
+        Project Summary
       </p>
     </div>
   </div>
@@ -37,11 +42,15 @@ export default {
 * {
   transition: opacity 500ms ease-in-out;
 }
+
 .container {
   width: 100%;
   height: 100%;
-  padding: 3%;
-  color: white;
+  padding: 20%;
+  color: black;
+  overflow: hidden;
+  background-image: url("/penandpaper.png");
+  background-size: 130% 130%;
 }
 
 .hidden {

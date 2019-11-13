@@ -8,13 +8,13 @@
         <div class="spacer" />
         <div class="slide-content">
           <ul>
-            <li><strong>Foo Yong Qi</strong> Project Leader</li>
-            <li><strong>Foo Yong Qi</strong> Project Leader</li>
-            <li><strong>Foo Yong Qi</strong> Project Leader</li>
-            <li><strong>Foo Yong Qi</strong> Project Leader</li>
-            <li><strong>Foo Yong Qi</strong> Project Leader</li>
-            <li><strong>Foo Yong Qi</strong> Project Leader</li>
-            <li><strong>Foo Yong Qi</strong> Project Leader</li>
+            <li><strong>Foo Yong Qi</strong> - Project Lead</li>
+            <li><strong>Tan Wang Ren</strong> - Syllabus Creator</li>
+            <li><strong>Lim Si Yeon</strong> - Syllabus Creator</li>
+            <li><strong>Valavan Rajarajan</strong> Main Instructor</li>
+            <li><strong>Lim Xiu Qing</strong> - Business Development</li>
+            <li><strong>Esmonde Tan</strong> - Business Development</li>
+            <li><strong>Sutaveraya Suratanakavikul</strong> - Operations</li>
           </ul>
         </div>
       </div>
@@ -51,13 +51,18 @@ ul {
   width: 50vmin;
 }
 
-.two-elements {
-  height: 100%;
-  padding: 5vmin;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.slide-content {
+  font-size: 3vmin;
+}
+
+.slide-title {
+  font-size: 5vmin;
+}
+
+@media (orientation: portrait) {
+  .slide-content {
+    font-size: 2.5vmin;
+  }
 }
 
 * {
@@ -68,6 +73,7 @@ ul {
   width: 100%;
   height: 100%;
   color: black;
+  padding: 5%;
 }
 
 </style>

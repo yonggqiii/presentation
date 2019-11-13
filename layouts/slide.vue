@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <div class="slide">
+    <div class="slide" :class="{'cool': theme==='cool', 'dark': theme==='dark'}">
       <nuxt />
     </div>
   </div>
@@ -35,6 +35,25 @@ export default {
   data () {
     return {
       current: '1/1'
+    }
+  },
+  computed: {
+    theme () {
+      const lookUpTable = {
+        'work-breakdown': 'cool',
+        '9': 'cool',
+        'timeline': 'cool',
+        '10': 'cool',
+        '11': 'cool',
+        '13': 'dark',
+        '14': 'dark',
+        '17': 'dark',
+        '18': 'dark',
+        '19': 'dark',
+        '20': 'dark'
+      }
+      const a = lookUpTable[this.current.split('/')[0]]
+      return a || 'default'
     }
   },
   mounted () {
@@ -79,7 +98,8 @@ export default {
         'ArrowRight': 'next',
         'ArrowDown': 'next',
         'ArrowUp': 'prev',
-        'ArrowLeft': 'prev'
+        'ArrowLeft': 'prev',
+        ' ': 'next'
       }
       if (lookupTable[e.key] === 'next') {
         this.goNext()
@@ -118,6 +138,9 @@ export default {
 }
 </script>
 <style>
+html {
+  font-size: 3vmin;
+}
 .background {
   display: flex;
   align-items: center;
@@ -132,23 +155,30 @@ export default {
   background-image: radial-gradient(circle farthest-corner, #e1dfe0,  #b9b8b9);
 }
 
-h1 {
-  font-size: 7vmin;
+.cool {
+  background-image: radial-gradient(circle farthest-corner, #d5e1ee,  #9baeb6);
 }
 
-p {
-  font-size: 3.5vmin;
+.dark {
+  background: #262626;
 }
 
+.two-elements {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .slide-title {
-  font-size: 7vmin;
+  font-size: 5.5vmin;
   font-weight: bold;
   font-family: Raleway;
 }
 
 .slide-content {
   font-family: Didact Gothic;
-  font-size: 3.5vmin;
+  font-size: 3vmin;
 }
 
 .fadein-enter-active,
@@ -165,6 +195,19 @@ p {
 
 .spacer {
   height: 5vmin;
+}
+
+@media (orientation: portrait) {
+  .slide-title {
+    font-size: 4.5vmin;
+    font-weight: bold;
+    font-family: Raleway;
+  }
+
+  .slide-content {
+    font-family: Didact Gothic;
+    font-size: 2.5vmin;
+  }
 }
 
 </style>

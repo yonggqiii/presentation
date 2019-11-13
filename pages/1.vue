@@ -1,15 +1,11 @@
 <template>
   <div class="container">
     <div id="scene">
-      <div data-depth="0.3" class="layer stars" />
+      <div data-depth="0.3" left="-150px" class="layer">
+        <img src="@/static/cover.png" class="bg">
+      </div>
 
-      <div data-depth="0.3" class="layer twinkling" />
-
-      <div data-depth="0.3" class="layer clouds" />
-
-      <div data-depth="0" class="layer bg" />
-
-      <div data-depth="0.8" class="layer" style="padding: 10vmin 0 0 10vmin;">
+      <div data-depth="0.7" class="layer" style="padding: 10vmin 0 0 10vmin;">
         <div class="company-container">
           <div>
             <img id="peatree" src="@/static/logo.svg" alt="logo">
@@ -20,10 +16,10 @@
         </div>
       </div>
 
-      <div style="padding: 60vmin 0 0 calc(50vmin + 20vw)" data-depth="0.8" class="layer">
+      <div style="padding: 55vmin 0 0 calc(50vmin + 25vw)" data-depth="1.2" class="layer">
         <div class="company-container">
           <div>
-            <img id="sqkii" src="@/static/sqkii_logo.png" alt="logo">
+            <img class="coylogo" src="@/static/sqkii_logo.png" alt="logo">
           </div>
           <div style="display: flex; align-items: center" class="company-name">
             <span style="font-family: Dancing Script; color: #ffc152">Sqkii</span>
@@ -31,9 +27,39 @@
         </div>
       </div>
 
-      <div id="title-container" data-depth="2" class="layer">
+      <div style="padding: 45vmin 0 0 calc(5vmin)" data-depth="1.3" class="layer">
+        <div class="company-container">
+          <div>
+            <img class="coylogo" src="@/static/coursemology.svg" alt="logo">
+          </div>
+          <div style="display: flex; align-items: center" class="company-name">
+            <span style="font-family: Didact Gothic; color: rgb(194, 194, 194)">Coursemology</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 5vmin 0 0 calc(65vmin)" data-depth="0.9" class="layer">
+        <div class="company-container">
+          <div>
+            <img class="coylogo" src="@/static/Co-Brand-SoC-H.png" alt="logo">
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 60vmin 0 0 25vmin" data-depth="1.6" class="layer">
+        <div class="company-container">
+          <div>
+            <img class="coylogo" src="@/static/HaiSingemblem.png" alt="logo">
+          </div>
+          <div style="display: flex; align-items: center" class="company-name">
+            <span style="font-family: Arial, Roboto; color: white">Hai Sing<br>Catholic School</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="title-container" data-depth="2.5" class="layer">
         <div id="title">
-          <h1>PYTHON FOR EV3</h1>
+          <h1>Code With (N)Us</h1>
           <p>
             IE4240 Group 1
           </p>
@@ -41,7 +67,7 @@
         </div>
       </div>
 
-      <div style="padding-top: 50vmin; padding-left: 10vmin;" data-depth="3" class="layer">
+      <div style="padding-top: 50vmin; padding-left: 10vmin;" data-depth="3.5" class="layer">
         <span class="typewriter">{{ typetext }}</span>
       </div>
     </div>
@@ -144,10 +170,12 @@ export default {
 }
 
 .bg {
-  background-image: radial-gradient(circle farthest-side, #171f25,  black);
-  height: 100%;
-  width: 100%;
-  opacity: 0.6;
+  object-fit: cover;
+  height: 120%;
+  width: 120%;
+  position: relative;
+  left: -10%;
+  top: -10%;
 }
 
 h1 {
@@ -182,16 +210,16 @@ p {
 
 .company-name {
   padding-left: 16px;
-  font-size: 5vmin;
+  font-size: 3vmin;
 }
 
 #peatree {
-  width: 15vmin;
+  width: 12vmin;
   animation: spin 2s linear infinite;
 }
 
-#sqkii {
-  width: 15vmin;
+.coylogo {
+  height: 12vmin;
 }
 
 @keyframes spin {
@@ -202,43 +230,10 @@ p {
     transform: rotate(360deg);
   }
 }
-@keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-
-@keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
-}
-@-webkit-keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
-}
-@-moz-keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
-}
-@-ms-keyframes move-clouds-back {
-    from {background-position: 0;}
-    to {background-position:10000px 0;}
-}
 
 .typewriter {
   font-size: 4vmin;
-  color: rgb(114, 191, 214);
+  color: rgb(243, 228, 177);
   border-right: .15em solid #fdfbf3; /* The typwriter cursor */
   animation: blink-caret .75s step-end infinite;
   font-family: Roboto Mono;
@@ -246,43 +241,7 @@ p {
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #eceba7; }
-}
-
-.stars, .twinkling, .clouds {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:150%;
-  height:150%;
-  display:block;
-}
-
-.stars {
-  background:#000 url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
-
-}
-
-.twinkling{
-  background:transparent url('http://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
-
-  -moz-animation:move-twink-back 200s linear infinite;
-  -ms-animation:move-twink-back 200s linear infinite;
-  -o-animation:move-twink-back 200s linear infinite;
-  -webkit-animation:move-twink-back 200s linear infinite;
-  animation:move-twink-back 200s linear infinite;
-}
-
-.clouds{
-    background:transparent url('http://www.script-tutorials.com/demos/360/images/clouds3.png') no-repeat top center;
-
-  -moz-animation:move-clouds-back 200s linear infinite;
-  -ms-animation:move-clouds-back 200s linear infinite;
-  -o-animation:move-clouds-back 200s linear infinite;
-  -webkit-animation:move-clouds-back 200s linear infinite;
-  animation:move-clouds-back 200s linear infinite;
+  50% { border-color: #b3ffe6; }
 }
 
 @media(max-width: 1080px) {

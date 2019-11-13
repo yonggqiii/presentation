@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <div class="slide">
+    <div class="slide" :class="{'cool': theme==='cool'}">
       <nuxt />
     </div>
   </div>
@@ -35,6 +35,23 @@ export default {
   computed: {
     current () {
       return this.$store.state.current.page
+    },
+    theme () {
+      const lookUpTable = {
+        'work-breakdown': 'cool',
+        '9': 'cool',
+        'timeline': 'cool',
+        '10': 'cool',
+        '11': 'cool',
+        '13': 'dark',
+        '14': 'dark',
+        '17': 'dark',
+        '18': 'dark',
+        '19': 'dark',
+        '20': 'dark'
+      }
+      const a = this.current ? lookUpTable[this.current.split('/')[0]] : 'default'
+      return a
     }
   },
   watch: {

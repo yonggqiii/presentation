@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div id="scene">
-<div data-depth="0.2" left="-150px" class="layer">
-        <img src="@/static/coding.png" class="bg">
+      <div data-depth="0.3" left="-150px" class="layer">
+        <img src="@/static/cover.png" class="bg">
       </div>
 
-      <div data-depth="0.8" class="layer" style="padding: 10vmin 0 0 10vmin;">
+      <div data-depth="0.7" class="layer" style="padding: 10vmin 0 0 10vmin;">
         <div class="company-container">
           <div>
             <img id="peatree" src="@/static/logo.svg" alt="logo">
@@ -16,7 +16,7 @@
         </div>
       </div>
 
-      <div style="padding: 60vmin 0 0 calc(50vmin + 20vw)" data-depth="0.8" class="layer">
+      <div style="padding: 55vmin 0 0 calc(50vmin + 25vw)" data-depth="1.2" class="layer">
         <div class="company-container">
           <div>
             <img class="coylogo" src="@/static/sqkii_logo.png" alt="logo">
@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div style="padding: 50vmin 0 0 calc(5vmin)" data-depth="0.8" class="layer">
+      <div style="padding: 45vmin 0 0 calc(5vmin)" data-depth="1.3" class="layer">
         <div class="company-container">
           <div>
             <img class="coylogo" src="@/static/coursemology.svg" alt="logo">
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div style="padding: 5vmin 0 0 calc(65vmin)" data-depth="0.8" class="layer">
+      <div style="padding: 5vmin 0 0 calc(65vmin)" data-depth="0.9" class="layer">
         <div class="company-container">
           <div>
             <img class="coylogo" src="@/static/Co-Brand-SoC-H.png" alt="logo">
@@ -46,9 +46,20 @@
         </div>
       </div>
 
-      <div id="title-container" data-depth="2" class="layer">
+      <div style="padding: 60vmin 0 0 25vmin" data-depth="1.6" class="layer">
+        <div class="company-container">
+          <div>
+            <img class="coylogo" src="@/static/HaiSingemblem.png" alt="logo">
+          </div>
+          <div style="display: flex; align-items: center" class="company-name">
+            <span style="font-family: Arial, Roboto; color: white">Hai Sing<br>Catholic School</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="title-container" data-depth="2.5" class="layer">
         <div id="title">
-          <h1>PYTHON FOR EV3</h1>
+          <h1>Code With (N)Us</h1>
           <p>
             IE4240 Group 1
           </p>
@@ -56,7 +67,7 @@
         </div>
       </div>
 
-      <div style="padding-top: 50vmin; padding-left: 10vmin;" data-depth="3" class="layer">
+      <div style="padding-top: 50vmin; padding-left: 10vmin;" data-depth="3.5" class="layer">
         <span class="typewriter">{{ typetext }}</span>
       </div>
     </div>
@@ -199,16 +210,16 @@ p {
 
 .company-name {
   padding-left: 16px;
-  font-size: 5vmin;
+  font-size: 3vmin;
 }
 
 #peatree {
-  width: 15vmin;
+  width: 12vmin;
   animation: spin 2s linear infinite;
 }
 
 .coylogo {
-  height: 15vmin;
+  height: 12vmin;
 }
 
 @keyframes spin {
@@ -231,17 +242,6 @@ p {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #b3ffe6; }
-}
-
-.stars, .twinkling, .clouds {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:150%;
-  height:150%;
-  display:block;
 }
 
 @media(max-width: 1080px) {

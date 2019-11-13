@@ -42,6 +42,14 @@ export default {
   modules: [
     '@nuxtjs/pwa'
   ],
+  manifest: {
+    short_name: 'ie4240',
+    name: 'ie4240 presentation',
+    start_url: '/',
+    background_color: '#000000',
+    display: 'standalone',
+    theme_color: '#000000'
+  },
   /*
   ** Build configuration
   */
